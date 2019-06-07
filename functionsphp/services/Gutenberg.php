@@ -76,21 +76,15 @@ final class Gutenberg implements Service, Registerable, Conditional {
 
         \add_theme_support('editor-styles'); 
 
-
         // \add_theme_support( 'dark-editor-style' );
-
 
         \add_theme_support( 'align-wide' );
 
-
         \add_theme_support( 'wp-block-styles' );
-
 
         \add_theme_support( 'responsive-embeds' );
 
-
         \add_theme_support( 'disable-custom-colors' );
-
 
         \add_theme_support( 'editor-color-palette', array(
 
@@ -120,9 +114,7 @@ final class Gutenberg implements Service, Registerable, Conditional {
 
         ));
 
-
         // add_theme_support('disable-custom-font-sizes');
-
 
         \add_theme_support( 'editor-font-sizes', array(
 
