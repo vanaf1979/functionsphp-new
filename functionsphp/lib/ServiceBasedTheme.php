@@ -110,9 +110,9 @@ class ServiceBasedTheme {
 
             if ( is_subclass_of( $service , 'FunctionsPhp\Lib\Registerable' ) ) {
 
-               $service->register();
-                
-			}
+                $service->register();
+
+            }
 
         }
 
