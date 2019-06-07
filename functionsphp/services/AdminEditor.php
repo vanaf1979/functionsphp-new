@@ -16,7 +16,6 @@ use FunctionsPhp\Lib\Conditional;
 
 final class AdminEditor implements Service, Registerable, Conditional {
 
-
     /**
      * the constructor.
      */

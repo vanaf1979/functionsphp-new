@@ -15,7 +15,6 @@ use FunctionsPhp\Lib\Registerable;
 
 final class RegisterMenus implements Service, Registerable {
 
-
     /**
      * the constructor.
      */

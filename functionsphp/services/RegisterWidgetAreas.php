@@ -15,7 +15,6 @@ use FunctionsPhp\Lib\Registerable;
 
 final class RegisterWidgetAreas implements Service, Registerable {
 
-
     /**
      * the constructor.
      */

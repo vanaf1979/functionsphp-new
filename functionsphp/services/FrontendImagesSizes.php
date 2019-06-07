@@ -15,7 +15,6 @@ use FunctionsPhp\Lib\Registerable;
 
 final class FrontendImagesSizes implements Service, Registerable {
 
-
     /**
      * the constructor.
      */

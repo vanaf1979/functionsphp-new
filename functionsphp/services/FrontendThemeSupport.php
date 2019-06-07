@@ -15,7 +15,6 @@ use FunctionsPhp\Lib\Registerable;
 
 final class FrontendThemeSupport implements Service, Registerable {
 
-
     /**
      * the constructor.
      */
