@@ -99,7 +99,6 @@ class ServiceBasedTheme {
 
         foreach ( $services as $id => $service ) {
 
-
             if ( is_subclass_of( $service , 'FunctionsPhp\Lib\Conditional' ) ) {
                 
                 if( ! $service::is_needed() ) {

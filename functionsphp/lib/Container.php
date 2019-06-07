@@ -8,9 +8,10 @@ use \ReflectionClass;
 /**
  * Class Container
  * https://gist.githubusercontent.com/MustafaMagdi/2bb27aebf6ab078b1f3e5635c0282fac/raw/38b0a19819d7c8d494fbb4ef5e8683fe6bfb2faa/Container.php
+ * https://github.com/MustafaMagdi
  */
 class Container {
-	
+
 	/**
 	 * @var array
 	 */
