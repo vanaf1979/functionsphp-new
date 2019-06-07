@@ -11,7 +11,6 @@ namespace FunctionsPhp\Services;
 
 use FunctionsPhp\Lib\Service;
 use FunctionsPhp\Lib\Registerable;
-use FunctionsPhp\Lib\Conditional;
 
 
 final class TextDomain implements Service, Registerable {
