@@ -4,6 +4,7 @@ namespace FunctionsPhp\lib;
 
 
 use FunctionsPhp\FunctionsPhp;
+use FunctionsPhp\Lib\Container;
 
 
 class ServiceBasedTheme {
@@ -94,7 +95,10 @@ class ServiceBasedTheme {
 
         $services = $this->services;
 
+        $container = new Container();
+
         foreach ( $services as $id => $service ) {
+
 
             if ( is_subclass_of( $service , 'FunctionsPhp\Lib\Conditional' ) ) {
                 
@@ -106,7 +110,9 @@ class ServiceBasedTheme {
                 
             }
 
-            $service = new $service;
+            $container->set( $service );
+
+            $service = $container->get( $service );
 
             if ( is_subclass_of( $service , 'FunctionsPhp\Lib\Registerable' ) ) {
 

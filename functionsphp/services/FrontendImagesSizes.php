@@ -18,7 +18,7 @@ final class FrontendImagesSizes implements Service, Registerable {
     /**
      * the constructor.
      */
-    public function __construct() { }
+    public function __construct( ) { }
 
 
     /**
