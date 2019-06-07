@@ -78,5 +78,5 @@ final class FrontEndEnqueue implements Service, Registerable, Conditional {
         \wp_enqueue_style( TEXT_DOMAIN  . '-app' , THEME_PATH . '/style.css' , array() , THEME_VERSION , 'all' );
 
     }
-    
+
 }

@@ -31,7 +31,7 @@ final class TextDomain implements Service, Registerable {
      * @return void
      */
     public function register() : void {
-        
+
         \add_action( 'after_setup_theme' , array( $this , 'load_theme_textdomain' ), 1 );
 
     }
@@ -49,5 +49,5 @@ final class TextDomain implements Service, Registerable {
         \load_theme_textdomain( TEXT_DOMAIN , THEME_PATH . '/languages' );
 
     }
-    
+
 }
