@@ -6,6 +6,9 @@ namespace FunctionsPhp;
 class FunctionsPhp {
 
 
+    /**
+     * the constructor.
+     */
     public function __construct() {
 
         $this->register_constants();
@@ -13,6 +16,13 @@ class FunctionsPhp {
     }
 
 
+    /**
+     * get_service_classes.
+     *
+     * Store and return all services classes.
+     *
+     * @return array
+     */
     public function get_service_classes(): array {
 
         return [
@@ -24,6 +34,13 @@ class FunctionsPhp {
     }
 
 
+    /**
+     * register_constants.
+     *
+     * Register all constants for this theme.
+     *
+     * @return void
+     */
     private function register_constants() : void {
 
         $theme = \wp_get_theme();
