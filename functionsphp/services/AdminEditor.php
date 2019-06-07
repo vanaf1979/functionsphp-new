@@ -61,7 +61,7 @@ public function __construct() { }
      */
     public function add_editor_styles() : void {
 
-        add_editor_style();
+        \add_editor_style();
 
     }
 
@@ -75,25 +75,25 @@ public function __construct() { }
      */
     public function editor_theme_supported_features() : void {
 
-        add_theme_support('editor-styles'); 
+        \add_theme_support('editor-styles'); 
 
 
-        // add_theme_support( 'dark-editor-style' );
+        // \add_theme_support( 'dark-editor-style' );
 
 
-        add_theme_support( 'align-wide' );
+        \add_theme_support( 'align-wide' );
 
 
-        add_theme_support( 'wp-block-styles' );
+        \add_theme_support( 'wp-block-styles' );
 
 
-        add_theme_support( 'responsive-embeds' );
+        \add_theme_support( 'responsive-embeds' );
 
 
-        add_theme_support( 'disable-custom-colors' );
+        \add_theme_support( 'disable-custom-colors' );
 
 
-        add_theme_support( 'editor-color-palette', array(
+        \add_theme_support( 'editor-color-palette', array(
 
             array(
                 'name' => __( 'Dark green', TEXT_DOMAIN ),
@@ -125,7 +125,7 @@ public function __construct() { }
         // add_theme_support('disable-custom-font-sizes');
 
 
-        add_theme_support( 'editor-font-sizes', array(
+        \add_theme_support( 'editor-font-sizes', array(
 
             array(
                 'name' => __( 'Small', TEXT_DOMAIN ),
