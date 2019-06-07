@@ -46,7 +46,7 @@ final class FrontendImagesSizes implements Service, Registerable {
      */
     public function register_thumbnail_sizes() : void {
 
-        add_image_size( 'custom-thumbnail' , 900 , 600 , true );
+        \add_image_size( 'custom-thumbnail' , 900 , 600 , true );
 
     }
 
@@ -60,7 +60,7 @@ final class FrontendImagesSizes implements Service, Registerable {
      */
     public function add_post_thumbnails_support() : void {
 
-        add_theme_support( 'post-thumbnails' );
+        \add_theme_support( 'post-thumbnails' );
 
     }
 
