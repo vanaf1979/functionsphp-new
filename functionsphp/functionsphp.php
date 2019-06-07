@@ -33,7 +33,7 @@ class FunctionsPhp {
             'FrontendThemeSupport' => \FunctionsPhp\Services\FrontendThemeSupport::class,
             'FontendCleanup' => \FunctionsPhp\Services\FontendCleanup::class,
             'FrontendEnqueue' => \FunctionsPhp\Services\FrontendEnqueue::class,
-            'AdminEditor' => \FunctionsPhp\Services\AdminEditor::class,
+            'Gutenberg' => \FunctionsPhp\Services\Gutenberg::class,
         ];
 
     }

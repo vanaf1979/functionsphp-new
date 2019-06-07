@@ -14,7 +14,7 @@ use FunctionsPhp\Lib\Registerable;
 use FunctionsPhp\Lib\Conditional;
 
 
-final class AdminEditor implements Service, Registerable, Conditional {
+final class Gutenberg implements Service, Registerable, Conditional {
 
     /**
      * the constructor.
