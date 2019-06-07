@@ -14,7 +14,7 @@ use FunctionsPhp\Lib\Registerable;
 use FunctionsPhp\Lib\Conditional;
 
 
-final class FrontEndEnqueue implements Service, Registerable, Conditional {
+final class FrontendEnqueue implements Service, Registerable, Conditional {
 
 
     /**

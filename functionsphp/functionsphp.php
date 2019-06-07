@@ -27,7 +27,11 @@ class FunctionsPhp {
 
         return [
             'TextDomain' => \FunctionsPhp\Services\TextDomain::class,
-            'FrontEndEnqueue' => \FunctionsPhp\Services\FrontEndEnqueue::class,
+            'RegisterWidgetAreas' => \FunctionsPhp\Services\RegisterWidgetAreas::class,
+            'RegisterMenus' => \FunctionsPhp\Services\RegisterMenus::class,
+            'FrontendImagesSizes' => \FunctionsPhp\Services\FrontendImagesSizes::class,
+            'FontendCleanup' => \FunctionsPhp\Services\FontendCleanup::class,
+            'FrontendEnqueue' => \FunctionsPhp\Services\FrontendEnqueue::class,
             'AdminEditor' => \FunctionsPhp\Services\AdminEditor::class,
         ];
 
