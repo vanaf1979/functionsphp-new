@@ -1,6 +1,6 @@
 <?php
 /**
- * Enqueue styles and scripts for the frontend.
+ * Register custom thumbnail sizes.
  *
  * @package    FunctionsPhp
  * @subpackage FunctionsPhp/Services

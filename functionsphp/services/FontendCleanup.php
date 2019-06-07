@@ -1,6 +1,6 @@
 <?php
 /**
- * Enqueue styles and scripts for the frontend.
+ * Remove unneeded features from the head.
  *
  * @package    FunctionsPhp
  * @subpackage FunctionsPhp/Services

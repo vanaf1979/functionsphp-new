@@ -1,6 +1,6 @@
 <?php
 /**
- * Enqueue styles and scripts for the frontend.
+ * Register widget areas for this theme.
  *
  * @package    FunctionsPhp
  * @subpackage FunctionsPhp/Services
