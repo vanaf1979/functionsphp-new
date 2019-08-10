@@ -1,6 +1,6 @@
 <?php
 
-namespace FunctionsPhp\lib;
+namespace FunctionsPhp\Lib;
 
 
 use FunctionsPhp\FunctionsPhp;
@@ -18,6 +18,17 @@ class ServiceBasedTheme {
      * Array of services.
      */
     private $services = null;
+
+    /**
+     * Array of services.
+     */
+    private $definitions = null;
+
+
+    /**
+     * Array of services.
+     */
+    private $container = null;
 
 
     /**
@@ -42,6 +53,10 @@ class ServiceBasedTheme {
         $this->set_theme_class();
 
         $this->get_theme_services();
+
+        $this->get_theme_definitions();
+
+        $this->build_container();
 
         $this->run_theme_services();
 
@@ -85,6 +100,46 @@ class ServiceBasedTheme {
 
 
     /**
+     * get_theme_definitions.
+     *
+     * Get array of definitions.
+     *
+     * @return void
+     */
+    private function get_theme_definitions() : void {
+
+        if( $this->definitions == null ) {
+
+            $this->definitions = $this->themeclass->get_definitions();
+
+        }
+        
+    }
+
+
+    /**
+     * build_container.
+     *
+     * ...
+     *
+     * @return void
+     */
+    private function build_container() : void {
+
+        if( $this->container == null ) {
+
+            $builder = new \DI\ContainerBuilder();
+
+            $builder->addDefinitions( $this->definitions );
+
+            $this->container = $builder->build();
+
+        }
+
+    }
+
+
+    /**
      * run_theme_services.
      *
      * Check and instantiate the service classes.
@@ -93,11 +148,7 @@ class ServiceBasedTheme {
      */
     private function run_theme_services() : void {
 
-        $services = $this->services;
-
-        $container = new Container();
-
-        foreach ( $services as $id => $service ) {
+        foreach ( $this->services as $id => $service ) {
 
             if ( is_subclass_of( $service , 'FunctionsPhp\Lib\Conditional' ) ) {
                 
@@ -109,9 +160,7 @@ class ServiceBasedTheme {
                 
             }
 
-            $container->set( $service );
-
-            $service = $container->get( $service );
+            $service = $this->container->get( $service  );
 
             if ( is_subclass_of( $service , 'FunctionsPhp\Lib\Registerable' ) ) {
 

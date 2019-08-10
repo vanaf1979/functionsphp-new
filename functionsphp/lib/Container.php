@@ -120,6 +120,11 @@ class Container {
 
 			if ( $dependency === NULL ) {
 
+
+				### Kijken of we shit kunnen vinden in de arrays in functionsphp.php
+
+
+
 				// check if default value for a parameter is available
 				if ($parameter->isDefaultValueAvailable()) {
 

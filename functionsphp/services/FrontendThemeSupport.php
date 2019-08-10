@@ -67,6 +67,5 @@ final class FrontendThemeSupport implements Service, Registerable {
         ));
 
     }
-
-
+    
 }

@@ -1,4 +1,10 @@
 <?php
+/**
+ * Configure functionsphp and the theme.
+ *
+ * @package    FunctionsPhp
+ * @subpackage FunctionsPhp
+ */
 
 namespace FunctionsPhp;
 
@@ -34,6 +40,22 @@ class FunctionsPhp {
             'FontendCleanup' => \FunctionsPhp\Services\FontendCleanup::class,
             'FrontendEnqueue' => \FunctionsPhp\Services\FrontendEnqueue::class,
             'Gutenberg' => \FunctionsPhp\Services\Gutenberg::class,
+        ];
+
+    }
+
+
+    /**
+     * get_definitions.
+     *
+     * Store and return all definitions.
+     *
+     * @return array
+     */
+    public function get_definitions(): array {
+
+        return [
+            FunctionsPhp\Dependencies\Single::class => \DI\factory('FunctionsPhp\Dependencies\Single::instance')
         ];
 
     }

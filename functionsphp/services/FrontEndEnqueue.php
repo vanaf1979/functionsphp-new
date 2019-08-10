@@ -13,21 +13,24 @@ use FunctionsPhp\Lib\Service;
 use FunctionsPhp\Lib\Registerable;
 use FunctionsPhp\Lib\Conditional;
 use FunctionsPhp\Dependencies\Dep;
+use FunctionsPhp\Dependencies\Single;
 
 
 final class FrontendEnqueue implements Service, Registerable, Conditional {
 
     protected $dep;
 
+    protected $single;
+
 
     /**
      * the constructor.
      */
-    public function __construct( Dep $dep ) { 
+    public function __construct( Dep $dep, Single $single ) { 
 
         $this->dep = $dep;
 
-        $this->dep->test();
+        $single->echo();
 
     }
 

@@ -12,12 +12,12 @@ License URI:        http://opensource.org/licenses/MIT
 */
 
 
-/* Bootstrap FunctionsPhp */
 if ( ! defined( 'ABSPATH' ) ) {
     
     die();
     
 }
 
+/* Bootstrap FunctionsPhp */
 require_once('functionsphp/lib/Bootstrap.php');
 ?>
