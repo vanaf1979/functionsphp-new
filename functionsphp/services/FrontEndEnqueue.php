@@ -12,25 +12,23 @@ namespace FunctionsPhp\Services;
 use FunctionsPhp\Lib\Service;
 use FunctionsPhp\Lib\Registerable;
 use FunctionsPhp\Lib\Conditional;
-use FunctionsPhp\Dependencies\Dep;
-use FunctionsPhp\Dependencies\Single;
+use FunctionsPhp\Dependencies\Theme;
 
 
 final class FrontendEnqueue implements Service, Registerable, Conditional {
 
-    protected $dep;
-
-    protected $single;
+    /**
+     * Themke data class.
+     */
+    protected $theme = null;
 
 
     /**
      * the constructor.
      */
-    public function __construct( Dep $dep, Single $single ) { 
+    public function __construct( Theme $theme ) { 
 
-        $this->dep = $dep;
-
-        $single->echo();
+        $this->theme = $theme;
 
     }
 
@@ -73,7 +71,12 @@ final class FrontendEnqueue implements Service, Registerable, Conditional {
      */
     public function enqueue_styles() : void {
 
-        \wp_enqueue_style( TEXT_DOMAIN  . '-app' , THEME_PATH . '/style.css' , array() , THEME_VERSION , 'all' );
+        \wp_enqueue_style( 
+            $this->theme->textdomain  . '-app',
+            $this->theme->path . '/style.css',
+            array() , $this->theme->version,
+            'all'
+        );
 
     }
 
@@ -87,7 +90,12 @@ final class FrontendEnqueue implements Service, Registerable, Conditional {
      */
     public function enqueue_scripts() : void {
 
-        \wp_enqueue_style( TEXT_DOMAIN  . '-app' , THEME_PATH . '/style.css' , array() , THEME_VERSION , 'all' );
+        \wp_enqueue_script(
+            $this->theme->textdomain  . '-app',
+            $this->theme->path . '/style.css',
+            array() , $this->theme->version,
+            'all'
+        );
 
     }
 

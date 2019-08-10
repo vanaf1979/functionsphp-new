@@ -12,7 +12,6 @@ namespace FunctionsPhp\Services;
 use FunctionsPhp\Lib\Service;
 use FunctionsPhp\Lib\Registerable;
 use FunctionsPhp\Lib\Conditional;
-use FunctionsPhp\Dependencies\Single;
 
 
 final class FontendCleanup implements Service, Registerable, Conditional {
@@ -20,11 +19,7 @@ final class FontendCleanup implements Service, Registerable, Conditional {
     /**
      * the constructor.
      */
-    public function __construct( Single $single ) { 
-
-        $single->set('String from FontendCleanup class');
-
-    }
+    public function __construct( ) { }
 
 
     /**

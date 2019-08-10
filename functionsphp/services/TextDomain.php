@@ -11,14 +11,25 @@ namespace FunctionsPhp\Services;
 
 use FunctionsPhp\Lib\Service;
 use FunctionsPhp\Lib\Registerable;
+use FunctionsPhp\Dependencies\Theme;
 
 
 final class TextDomain implements Service, Registerable {
 
     /**
+     * Themke data class.
+     */
+    protected $theme = null;
+
+    
+    /**
      * the constructor.
      */
-    public function __construct() { }
+    public function __construct( Theme $theme ) { 
+
+        $this->theme = $theme;
+
+    }
 
 
     /**
@@ -44,7 +55,7 @@ final class TextDomain implements Service, Registerable {
      */
     public function load_theme_textdomain() : void {
 
-        \load_theme_textdomain( TEXT_DOMAIN , THEME_PATH . '/languages' );
+        \load_theme_textdomain( $this->theme->textdomain , $this->theme->path . '/languages' );
 
     }
 

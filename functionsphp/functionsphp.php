@@ -55,6 +55,7 @@ class FunctionsPhp {
     public function get_definitions(): array {
 
         return [
+            FunctionsPhp\Dependencies\Theme::class => \DI\factory('FunctionsPhp\Dependencies\Theme::instance'),
             FunctionsPhp\Dependencies\Single::class => \DI\factory('FunctionsPhp\Dependencies\Single::instance')
         ];
 
