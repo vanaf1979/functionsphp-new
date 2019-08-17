@@ -40,7 +40,7 @@ class FunctionsPhp {
             'FontendCleanup' => \FunctionsPhp\Services\FontendCleanup::class,
             'FrontendEnqueue' => \FunctionsPhp\Services\FrontendEnqueue::class,
             'Gutenberg' => \FunctionsPhp\Services\Gutenberg::class,
-            'TestEl' => \FunctionsPhp\Services\TestView::class
+            'TestView' => \FunctionsPhp\Services\TestView::class
         ];
 
     }
