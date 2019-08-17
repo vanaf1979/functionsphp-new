@@ -13,6 +13,7 @@ use FunctionsPhp\Lib\Service;
 use FunctionsPhp\Lib\Registerable;
 use FunctionsPhp\Lib\Conditional;
 use FunctionsPhp\Dependencies\Views;
+use FunctionsPhp\Dependencies\Transients;
 
 
 final class TestView implements Service, Registerable, Conditional {
@@ -26,9 +27,11 @@ final class TestView implements Service, Registerable, Conditional {
     /**
      * the constructor.
      */
-    public function __construct( Views $views ) { 
+    public function __construct( Views $views, Transients $transients ) { 
 
         $this->views = new $views();
+
+        $this->transients = new $transients();
 
     }
 
@@ -56,13 +59,13 @@ final class TestView implements Service, Registerable, Conditional {
      */
     public function register() : void {
     
-        \add_action( 'testview' , array( $this , 'test_view' ) );
+        \add_action( 'va79/testview' , array( $this , 'test_view' ) );
 
     }
 
 
     /**
-     * after_body_open_tag.
+     * test_view.
      *
      * ...
      *
@@ -70,7 +73,11 @@ final class TestView implements Service, Registerable, Conditional {
      */
     public function test_view() : void {
 
-        echo $this->views->render( 'footer' , [ 'test' => 'String' ] );
+        echo $this->transients->optional( 'footer' , function( ) {
+
+            return $this->views->render( 'footer' , [ 'test' => 'String' ] );
+
+        });
 
     }
 

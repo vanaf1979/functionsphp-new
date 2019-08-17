@@ -13,7 +13,7 @@
 
         <div id="app">
         
-            <?php do_action('testview'); ?>
+            <?php do_action('va79/testview'); ?>
 
             <h1>FunctionsPhp</h1>
 
