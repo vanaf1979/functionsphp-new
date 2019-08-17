@@ -70,7 +70,7 @@ final class TestView implements Service, Registerable, Conditional {
      */
     public function test_view() : void {
 
-        echo $this->views->render( 'footer' , [ 'test' => 'String' ] , false );
+        echo $this->views->render( 'footer' , [ 'test' => 'String' ] );
 
     }
 
