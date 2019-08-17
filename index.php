@@ -12,6 +12,8 @@
     <body <?php body_class(); ?>>
 
         <div id="app">
+        
+            <?php do_action('testview'); ?>
 
             <h1>FunctionsPhp</h1>
 

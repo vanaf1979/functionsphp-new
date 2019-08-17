@@ -15,7 +15,7 @@
         }
     },
     "require": {
-        
+        "spatie/html-element": "^1.1"
     },
     "require-dev": {
         "php-di/php-di": "^5.4"

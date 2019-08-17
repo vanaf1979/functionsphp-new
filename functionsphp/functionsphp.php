@@ -40,6 +40,7 @@ class FunctionsPhp {
             'FontendCleanup' => \FunctionsPhp\Services\FontendCleanup::class,
             'FrontendEnqueue' => \FunctionsPhp\Services\FrontendEnqueue::class,
             'Gutenberg' => \FunctionsPhp\Services\Gutenberg::class,
+            'TestEl' => \FunctionsPhp\Services\TestView::class
         ];
 
     }
@@ -56,7 +57,7 @@ class FunctionsPhp {
 
         return [
             FunctionsPhp\Dependencies\Theme::class => \DI\factory('FunctionsPhp\Dependencies\Theme::instance'),
-            FunctionsPhp\Dependencies\Single::class => \DI\factory('FunctionsPhp\Dependencies\Single::instance')
+            FunctionsPhp\Dependencies\Single::class => \DI\factory('FunctionsPhp\Dependencies\Single::instance'),
         ];
 
     }
