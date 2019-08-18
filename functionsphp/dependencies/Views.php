@@ -38,7 +38,7 @@ final class Views {
 
         $this->data = $this->array_to_object( $data );
 
-        if( $view ) {
+        if ( $view ) {
 
             return $this->load_view( $this->determine_filepath( $view ) );
 
@@ -92,15 +92,15 @@ final class Views {
 
         $path = __DIR__ . '/../views/' . $view;
 
-        if( file_exists( $path . '.php' ) ) { // Is file in views as .php
+        if ( file_exists( $path . '.php' ) ) { // Is file in views as .php
 
             return $path . '.php';
 
-        } else if( file_exists( $path . '.html' ) ) { // Is file in views as .html
+        } else if ( file_exists( $path . '.html' ) ) { // Is file in views as .html
 
             return $path . '.html';
 
-        } else if( '' != $themefile = \locate_template( $view . '.php' ) ) { // Is file in theme as .php
+        } else if ( '' != $themefile = \locate_template( $view . '.php' ) ) { // Is file in theme as .php
 
             return $themefile;
 
