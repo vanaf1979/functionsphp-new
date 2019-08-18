@@ -1,4 +1,15 @@
 <?php
+/**
+ * Views class.
+ * 
+ * Reder view files.
+ *
+ * @package   FunctionsPhp\Dependencies
+ * @author    Stephan Nijman.
+ * @license   MIT
+ * @link      https://vanaf1979.nl
+ * @copyright 2019 Stephan Nijman.
+ */
 
 namespace FunctionsPhp\Dependencies;
 
@@ -21,7 +32,7 @@ final class Views {
      *
      * Render a view file with optional data object
      *
-     * @return void
+     * @return string
      */
     public function render( string $view = null , array $data = null ) : string {
 
@@ -44,8 +55,12 @@ final class Views {
      * load_view.
      *
      * Require and buffer the view file.
+     * 
+     * @uses ob_start https://www.php.net/manual/en/function.ob-start.php
+     * @uses ob_get_clean https://www.php.net/manual/en/function.ob-get-clean.php
+     * @uses require  https://www.php.net/manual/en/function.require.php
      *
-     * @param string $viewpath
+     * @param string $viewpath path to view file.
      * 
      * @return void
      */
@@ -65,9 +80,11 @@ final class Views {
     /**
      * determine_filepath.
      *
-     * Chack if the view file exists as either a .php or a .html file.
+     * Chack if the view file exists in /views or theme folder.
+     * 
+     * @uses file_exists https://www.php.net/manual/en/function.file-exists.php
      *
-     * @param string $view 
+     * @param string $view name of view file.
      * 
      * @return string
      */
