@@ -93,7 +93,7 @@ final class Transients {
      */
     public function optional( string $transient = null , callable $callback = null , string $time = YEAR_IN_SECONDS ) {
 
-        if( '' != $transient_data = $this->get_transient( $transient ) ) {
+        if ( '' != $transient_data = $this->get_transient( $transient ) ) {
 
             return $transient_data;
         
