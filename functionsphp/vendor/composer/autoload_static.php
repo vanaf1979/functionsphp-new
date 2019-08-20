@@ -11,6 +11,10 @@ class ComposerStaticInitfc0179f59f1d121c94dc92a039bfd8a5
     );
 
     public static $prefixLengthsPsr4 = array (
+        'V' => 
+        array (
+            'Vanaf1979\\' => 10,
+        ),
         'S' => 
         array (
             'Spatie\\HtmlElement\\' => 19,
@@ -36,6 +40,10 @@ class ComposerStaticInitfc0179f59f1d121c94dc92a039bfd8a5
     );
 
     public static $prefixDirsPsr4 = array (
+        'Vanaf1979\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages',
+        ),
         'Spatie\\HtmlElement\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/html-element/src',

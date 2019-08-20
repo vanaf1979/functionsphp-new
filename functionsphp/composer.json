@@ -11,7 +11,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "FunctionsPhp\\": ""
+            "FunctionsPhp\\": "",
+            "Vanaf1979\\": "packages"
         }
     },
     "require": {
@@ -19,5 +20,14 @@
     },
     "require-dev": {
         "php-di/php-di": "^5.4"
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./packages",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
 }

@@ -13,7 +13,7 @@ use FunctionsPhp\Lib\Service;
 use FunctionsPhp\Lib\Registerable;
 use FunctionsPhp\Lib\Conditional;
 use FunctionsPhp\Dependencies\Views;
-use FunctionsPhp\Dependencies\Transients;
+use Vanaf1979\Transients\Transients;
 
 
 final class TestView implements Service, Registerable, Conditional {
